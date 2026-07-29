@@ -30,7 +30,7 @@ The main experience is the interactive app served by `app.py`.
 
 ### Public link strategy
 
-- Main portfolio button: `https://joshleh.github.io/healthcare-operations-analytics/`
+- Main portfolio button: `https://github.com/Sundramrai3691/Healthcare-Operations-Analytics-Platform`
 - Secondary interactive button: add later, after the static portfolio link is live
 
 This repo is now set up for that split:
@@ -116,7 +116,7 @@ The repository includes a GitHub Actions workflow that publishes `docs/` to GitH
 Expected URL:
 
 ```text
-https://joshleh.github.io/healthcare-operations-analytics/
+https://github.com/Sundramrai3691/Healthcare-Operations-Analytics-Platform
 ```
 
 ### Interactive app later
