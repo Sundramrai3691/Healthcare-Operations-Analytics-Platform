@@ -90,6 +90,12 @@ That story is reflected in the interface:
 - lab escalation feed
 - searchable patient journey timeline
 
+## Microsoft Excel Analysis
+
+Excel is provided as an additional reporting layer for exploratory data analysis and basic dashboarding.
+
+![Excel Dashboard](docs/assets/excel-dashboard-placeholder.png)
+
 ## SQL Workflow
 
 If you want to inspect the model and reporting layer directly:
