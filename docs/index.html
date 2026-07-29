@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Operations Analytics Platform | Healthcare Operations Case Study</title>
+    <meta
+      name="description"
+      content="A healthcare operations analytics case study showcasing schema design, reporting logic, and a polished hospital-style reporting surface."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-main">
+          <div>
+            <p class="sidebar-kicker">Healthcare Operations Analytics</p>
+            <h1>Healthcare Operations Analytics Platform</h1>
+            <p class="sidebar-copy">
+              A portfolio case study that turns a quick SQL project into a hospital-style analytics experience for operations, revenue, and reporting.
+            </p>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Sections">
+            <a href="#overview">Overview</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#schema">Schema</a>
+            <a href="#links">Links</a>
+          </nav>
+
+          <div class="sidebar-actions">
+            <a class="sidebar-button" href="#analytics">Explore analytics</a>
+            <a
+              class="sidebar-button sidebar-button-secondary"
+              href="https://github.com/joshleh/healthcare-operations-analytics"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View source
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-panel">
+            <p class="panel-label">Project scope</p>
+            <p class="sidebar-copy">
+              Schema design, SQL reporting, static front-end presentation, and healthcare-focused product storytelling.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="workspace-header" id="overview">
+          <div>
+            <p class="eyebrow">Portfolio Case Study</p>
+            <h2>A hospital operations analytics case study built from schema design, reporting logic, and product-minded presentation.</h2>
+            <p class="header-copy">
+              Healthcare Operations Analytics Platform reframes a personally built SQL project as a polished healthcare reporting surface, using exported query results to present patient volume, provider activity, procedures, and billing with a professional hospital-style interface.
+            </p>
+            <div class="hero-actions">
+              <a class="ghost-button primary-button" href="#analytics">Explore the showcase</a>
+              <a class="ghost-button" href="https://github.com/joshleh/healthcare-operations-analytics#readme" target="_blank" rel="noreferrer">Read project guide</a>
+            </div>
+          </div>
+
+          <div class="status-card">
+            <span class="status-dot"></span>
+            <div>
+              <p class="panel-label">Project focus</p>
+              <strong>SQL, reporting, and product storytelling</strong>
+            </div>
+          </div>
+        </header>
+
+        <section class="toolbar">
+          <div class="toolbar-note">
+            <p class="panel-label">Project summary</p>
+            <p>
+              This showcase presents the project as healthcare operations analytics rather than a database exercise alone, combining data modeling, query logic, and front-end presentation into one cohesive portfolio piece.
+            </p>
+          </div>
+
+          <div class="toolbar-actions">
+            <p class="toolbar-meta">Designed to be quick to scan, fast to load, and easy to share.</p>
+          </div>
+        </section>
+
+        <section class="metric-row">
+          <article class="metric-card">
+            <p class="metric-label">Seeded patients</p>
+            <h3 id="metric-patients">--</h3>
+            <p class="metric-detail">Core patient records represented across the reporting exports.</p>
+          </article>
+
+          <article class="metric-card">
+            <p class="metric-label">Appointments</p>
+            <h3 id="metric-appointments">--</h3>
+            <p class="metric-detail">Encounter volume used to frame operational workload and care activity.</p>
+          </article>
+
+          <article class="metric-card">
+            <p class="metric-label">Billed volume</p>
+            <h3 id="metric-billing">--</h3>
+            <p class="metric-detail">Revenue context surfaced through reporting outputs and static visual summaries.</p>
+          </article>
+
+          <article class="metric-card metric-accent">
+            <p class="metric-label">Project angle</p>
+            <h3>Hospital ops reporting</h3>
+            <p class="metric-detail">A portfolio-ready presentation of healthcare operations, revenue, and provider activity.</p>
+          </article>
+        </section>
+
+        <section class="operations-grid" id="analytics">
+          <article class="panel panel-full preview-panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Experience Preview</p>
+                <h3>How the live dashboard is meant to be explored</h3>
+              </div>
+              <p class="panel-copy">
+                The interactive app now leads with the command center and operations reporting, then moves into patient journey exploration before exposing the optional Demo Admin tools lower on the page.
+              </p>
+            </div>
+
+            <div class="preview-layout">
+              <img
+                class="preview-image"
+                src="./assets/dashboard-preview.png"
+                alt="Preview of the Healthcare Operations Analytics Platform dashboard"
+              />
+
+              <div class="content-stack">
+                <div class="snapshot-card">
+                  <p class="panel-label">Viewer flow</p>
+                  <strong>Analytics first, optional demo controls later</strong>
+                  <p class="panel-copy">
+                    The live experience is intentionally sequenced so a first-time viewer sees care delivery, revenue, and workflow reporting before reaching the seeded-data tools at the bottom.
+                  </p>
+                </div>
+
+                <div class="snapshot-card">
+                  <p class="panel-label">What the live experience includes</p>
+                  <ul class="bullet-list">
+                    <li>Command center filters and KPI cards that anchor the hospital operations story.</li>
+                    <li>Revenue, payer mix, schedule, and lab views that feel like an internal reporting product.</li>
+                    <li>Patient journey exploration followed by Demo Admin tools for deeper interaction.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel panel-wide">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Operations Trend</p>
+                <h3>Daily appointment volume</h3>
+              </div>
+              <p class="panel-copy">A static SVG chart rendered from exported SQL results.</p>
+            </div>
+            <div id="appointments-chart" class="chart-host"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Provider Highlight</p>
+                <h3 id="top-doctor">Loading...</h3>
+              </div>
+            </div>
+            <p id="top-doctor-detail" class="panel-copy"></p>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Procedure Highlight</p>
+                <h3 id="top-procedure">Loading...</h3>
+              </div>
+            </div>
+            <p id="top-procedure-detail" class="panel-copy"></p>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Peak Activity</p>
+                <h3 id="busiest-day">Loading...</h3>
+              </div>
+            </div>
+            <p id="busiest-day-detail" class="panel-copy"></p>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Top Doctors</p>
+                <h3>Appointment leaders</h3>
+              </div>
+            </div>
+            <div id="doctors-chart" class="chart-host compact"></div>
+          </article>
+
+          <article class="panel panel-wide">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Revenue Story</p>
+                <h3>Highest billed patients</h3>
+              </div>
+              <p class="panel-copy">One more static reporting surface that still feels product-oriented.</p>
+            </div>
+            <div id="billing-table" class="table-wrap"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Procedure Volume</p>
+                <h3>Most common procedures</h3>
+              </div>
+            </div>
+            <div id="procedures-chart" class="chart-host compact"></div>
+          </article>
+        </section>
+
+        <section class="dual-grid" id="schema">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Data Model</p>
+                <h3>Healthcare entities and reporting structure</h3>
+              </div>
+            </div>
+            <p class="panel-copy">
+              The project evolved from a simple patient-doctor-appointment dataset into a broader healthcare operations model that supports provider activity, procedure analysis, and billing visibility.
+            </p>
+            <img
+              class="schema-image"
+              src="./er_diagram.png"
+              alt="Entity relationship diagram for the healthcare management system"
+            />
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-label">Project Outcomes</p>
+                <h3>What the build covers</h3>
+              </div>
+            </div>
+
+            <div class="content-stack">
+              <div class="snapshot-card">
+                <p class="panel-label">Data modeling</p>
+                <strong>Patients, providers, procedures, appointments, and billing</strong>
+                <p class="panel-copy">
+                  The schema provides enough structure to support operational reporting and a believable hospital analytics story.
+                </p>
+              </div>
+
+              <div class="snapshot-card">
+                <p class="panel-label">Reporting logic</p>
+                <strong>Operational workload, provider activity, procedures, and billing</strong>
+                <p class="panel-copy">
+                  Exported query results become charts, rankings, and summary panels that feel closer to a product than a raw query notebook.
+                </p>
+              </div>
+
+              <div class="snapshot-card">
+                <p class="panel-label">Product direction</p>
+                <strong>Designed to scale into a richer interactive dashboard</strong>
+                <p class="panel-copy">
+                  The interactive build now prioritizes analytics and patient context up front, while keeping admin-seeded demo data lower in the experience so the viewer encounters the product story first.
+                </p>
+              </div>
+
+              <div class="snapshot-card">
+                <p class="panel-label">Best next improvements</p>
+                <ul class="bullet-list">
+                  <li>Add a public interactive deployment as a second portfolio link.</li>
+                  <li>Introduce short walkthrough media for the richer dashboard experience.</li>
+                  <li>Keep the static showcase aligned with future product refinements.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="deployment-grid" id="links">
+          <article class="panel">
+            <p class="panel-label">Repository</p>
+            <h3>Source code</h3>
+            <p class="panel-copy">
+              <a href="https://github.com/joshleh/healthcare-operations-analytics" target="_blank" rel="noreferrer">
+                github.com/joshleh/healthcare-operations-analytics
+              </a>
+            </p>
+          </article>
+
+          <article class="panel">
+            <p class="panel-label">Project guide</p>
+            <h3>Read the build notes</h3>
+            <p class="panel-copy">
+              <a href="https://github.com/joshleh/healthcare-operations-analytics#readme" target="_blank" rel="noreferrer">
+                README and implementation overview
+              </a>
+            </p>
+          </article>
+
+          <article class="panel">
+            <p class="panel-label">Built with</p>
+            <h3>SQL, exports, and a lightweight UI</h3>
+            <p class="panel-copy">SQL schema and queries, SQLite-based demo data exports, vanilla HTML/CSS/JS, and a hospital-style presentation layer.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
